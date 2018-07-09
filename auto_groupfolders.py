@@ -27,7 +27,12 @@ console.setFormatter(formatter)
 # add the handlers to logger
 logger.addHandler(console)
 
-urllib3.contrib.pyopenssl.inject_into_urllib3()
+try:
+    import urllib3.contrib.pyopenssl
+    urllib3.contrib.pyopenssl.inject_into_urllib3()
+except ImportError:
+    pass
+
 _http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED',
                            ca_certs=certifi.where())
 base_url = 'https://nextcloud.example.com'
