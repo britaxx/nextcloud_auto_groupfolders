@@ -1,7 +1,11 @@
 # nexcloud_auto_groupfolders
 
-Python script to manage GroupFolders API (https://github.com/nextcloud/groupfolders)
+Python script to manage GroupFolders API (https://github.com/nextcloud/groupfolders).
 
+## Configuration
+
+Edit base_url, base_uri and basic_auth with your nextcloud configuration.
+  
 ## Example 
 
 ```
